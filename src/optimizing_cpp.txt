@@ -51,4 +51,6 @@ lookup tsables for things with poor predictability
 
 Using global vairables for error propagation
 
-Dread memory allocation in Hot paths 
+Dread memory allocation in Hot paths
+
+Efficent caching is very important in registers 
