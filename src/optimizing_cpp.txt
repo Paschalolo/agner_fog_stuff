@@ -53,4 +53,6 @@ Using global vairables for error propagation
 
 Dread memory allocation in Hot paths
 
-Efficent caching is very important in registers 
+Efficent caching is very important in registers
+
+uiang non temporla hints on large arrays 
