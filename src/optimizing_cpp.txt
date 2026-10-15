@@ -49,4 +49,6 @@ They are exclusive to thier thread they have a cost look up cost especially if a
 You pay longer latency penalty on flating point number 
 lookup tsables for things with poor predictability
 
-Using global vairables for error propagation 
+Using global vairables for error propagation
+
+Dread memory allocation in Hot paths 
