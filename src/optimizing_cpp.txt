@@ -39,4 +39,12 @@ I would add Hardware aware algorithms i.e binary search on a large memory space 
 Note : CPU do not prefecth across page line
 
 
+Volatile keyword can prevent optimization and cause cmopiler to schedule instruction to read from memory instead of caching in a register 
 
+
+Thread local storage 
+They are exclusive to thier thread they have a cost look up cost especially if accesing from another thread 
+
+
+You pay longer latency penalty on flating point number 
+lookup tsables for things with poor predictability
