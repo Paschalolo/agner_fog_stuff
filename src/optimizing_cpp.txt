@@ -1,0 +1,42 @@
+
+
+# Optimizing C++ routines 
+
+Many software have software with long responses although microprocessor speeds have increased software has become a ton more slow due to abstractions and memory to cpu latency is longer than ever . 
+
+Note: reducing the level of abstraction actually makes software easiser to understand and makes you understand the cost of various features
+It is neccesary sometimes to compromise on advanced software principles to create fast and efficent software . i.e subroutine calls introduce jumps thrasheds instruction cache , inline code is predictable and exploits the spatial lcoality of the cache
+
+
+Instruction Set architectures 
+CISC - complex instruction set computer i.e x86
+RISC - Reduced instruction set Architecture i.e ARM , RISC-v 
+
+CISC tend to have reduce insturctions to perform an operation . all modern isa tend to execute on out of order superscalar processors so instruction are broken down into micro ops to exploit this hence 
+	e.g 
+		call printf 
+		broken down into 
+		sub rsp , 8 
+		mov [rsp] , rip
+		jmp printf_offset 
+ CISC has had addition of more registers with the introduction of AVX512
+
+ 8 mask regiters k0 - k7
+ vector registers zmm0- zmm31
+ 16 General Purpose registers rax - r15
+
+ CLock Cycles as the measure of perfromance 
+Hence it will take same clock cycles across architectures 
+
+Lock thread to core to prevent lossing cache information build up 
+
+Reduce the amount of context switch and procedure calls in hot paths i.e band context switch in hot patch , flushes TLB , evicts cache and kills cache state . 
+
+
+// Optimal Algorithms are of maximum importance when using these libaries
+I would add Hardware aware algorithms i.e binary search on a large memory space will kill tlb access and locality it will have random access time looking up from RAM directly but a binary search optimzed to fetch pages then those pages are set is gold for the cpu hence no minmal TLB misses data is likley sitting in l3 or l2 or even prfetched and you have locality as your friend . 
+
+Note : CPU do not prefecth across page line
+
+
+
