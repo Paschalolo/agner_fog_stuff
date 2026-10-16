@@ -1,0 +1,31 @@
+
+
+# OPTIMIZING ASSEMBLY 
+
+Reasons for using Assembly 
+
+Although less bugs and speed and productive can be achieved using high level languages i.e c , c++ Assembly are still very crtical for following reasons : 
+
+Debugging and understanding microarchitecture and high levl constructs and thier costs 
+Educational reasons 
+Making compilers and optimixation 
+reducing code size and optimizing cahe uops and effieceny 
+self modifying code 
+Hardware drivers and system code . i.e writing bootloaders accessing special resigster i.e cr3 , ds , fs , es , gs 
+Optimizing for code size 
+Otimizing for code speed , hiding latency and exploting the multiple issue port architecture 
+using vector registers 
+Reverse Engineering 
+Solving ABI compatability issues 
+
+Rules to go by : 
+Never use assembly for the whole program only use it for critical sectors . i.e regular logic or data upkeep dosent need assembly but critical speed componnents where latecnyc p99  and no bloat is needed you bet , you are using assembly. AI infrence engines or interpreters can be an exception if they are very critical and perfromance and speed consrtaints 
+
+
+
+x86 registers
+==============
+
+xmm0 -xmm31 For avx512 -> vecotr and floating points registers 
+rax - r15 
+
